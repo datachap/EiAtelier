@@ -62,7 +62,7 @@
     const maxScroll = servicesSection.offsetHeight - window.innerHeight;
   
     // Calculate image scale based on scroll position
-    const scale = 1 + (scrollPosition / maxScroll) * 0.05; // Adjust the factor (0.05) for desired scale
+    const scale = 1 + (scrollPosition / maxScroll) * 0.2; // Adjust the factor (0.05) for desired scale
   
     // Apply scale transformation to image
     serviceImage.style.transform = `scale(${scale})`;
@@ -83,7 +83,7 @@
 var options = {
   root: null,
   rootMargin: '0px',
-  threshold: 0.5 // Adjust the threshold as needed
+  threshold: 0.15 // Adjust the threshold as needed
 };
 
 var observer = new IntersectionObserver(function(entries, observer) {
