@@ -1,0 +1,290 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+  }
+  h2 {
+    font-size: 42px;
+  }
+  /* Set background image and apply parallax effect */
+  #hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    background-color: #111111;
+  }
+  
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    z-index: 1;
+    padding: 0 20px;
+  }
+  
+  .hero-content h1,
+  .hero-content p {
+    color: #ffffff;
+    font-size: 48px;
+  }
+  
+  .hero-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-image: url('img/hero-background.png');
+    background-position: center;
+  }
+  
+  /* Apply styles to other sections */
+  section {
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 80%;
+    height: auto;
+    margin: 30px auto;
+  }
+  
+/* Style navigation menu */
+nav {
+    background-color: rgba(0, 0, 0, 0.3); /* Set the desired opacity value */   
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: transparent;
+  }
+  
+  .nav-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    background-color: transparent;
+  }
+  
+  .nav-menu li {
+    margin-right: 20px;
+  }
+  
+  .nav-menu li:last-child {
+    margin-right: 0;
+  }
+  
+  .nav-menu a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+  
+  .nav-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+/* Services */
+#services .container {
+    height: 1100px;
+}
+.service-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .service-image {
+    background-image: url('img/services.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 1000px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .service-text {
+    width: 70%;
+    padding: 50px;
+    transform: translateX(-20%);
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-text h2 {
+    margin-bottom: 20px;
+    color: #333333;
+  }
+  
+  .service-text p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #555555;
+    margin: 20px;
+  }
+  
+  .service-text ul {
+    list-style-type: disc;
+    margin-bottom: 20px;
+    color: #555555;
+  }
+  
+  .service-text li {
+    margin-bottom: 10px;
+  }
+  
+  /* Style gallery carousel */
+  
+  .slick-slider {
+    width: 100%;
+    max-width: 80%; /* Adjust the maximum width as needed */
+    margin: 0 auto;
+  }
+  
+  .slick-slide img {
+    width: 100%;
+    height: auto;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .slick-slider {
+      max-width: 90%; /* Adjust the maximum width for mobile devices */
+    }
+  }
+  
+  .carousel-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .carousel-prev,
+  .carousel-next {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .carousel-prev:hover,
+  .carousel-next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  #portfolio p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 20px;
+  }
+  
+  #portfolio .container {
+    max-width: 90%;
+  }
+  
+  /* Contact Section */
+  #contact {
+    background-color: rgba(255, 255, 255);
+    padding: 80px 0;
+  }
+  
+  #contact .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  #contact h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #121212;
+  }
+  
+  #contact .contact-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    color: #121212;
+  }
+  
+  #contact p {
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #121212;
+  }
+  
+  #contact .contact-details a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  #contact .map {
+    width: 60%;
+  }
+  
+  #contact .map iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+  }
+  
+  /* Other CSS styles for the rest of your website... */
+  
+  
+  /* Style footer */
+  footer {
+    background-color: #111111;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer p {
+    font-size: 14px;
+  }
+  
+  /* Add responsive styles for smaller screens */
+  @media screen and (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 36px;
+    }
+  
+    .hero-content p {
+      font-size: 20px;
+    }
+  }
+  
