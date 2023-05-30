@@ -58,7 +58,7 @@
     right: -100%;
     bottom: 0;
     width: 100%;
-    background-image: url('img/hero-background.png');
+    background-image: url('img/hero-background.jpg');
     background-position: center;
     transition: right 3s ease-in-out;
   }
@@ -87,7 +87,7 @@
   
 /* Style navigation menu */
 nav {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.3);
     position: fixed;
     top: -100%;
     width: 100%;
@@ -113,6 +113,11 @@ nav {
     font-weight: bold;
     color: #ffffff;
     text-decoration: none;
+  }
+  
+  .nav-logo img {
+    width: 90px;
+    height: auto;
   }
   
   .nav-menu {
@@ -142,68 +147,22 @@ nav {
   .nav-menu a:hover {
     background-color: rgba(255, 255, 255, 0.1);
   }
-/* Services */
-#services .container {
-    height: 1000px;
-}
-.service-content {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  
-  .service-image {
-    background-image: url('img/services.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 50%;
-    height: 500px;
-    position: relative;
-    z-index: 1;
-  }
-  
-  .service-text {
-    width: 70%;
-    padding: 50px;
-    transform: translateX(-20%);
-    z-index: 2;
-    background-color: rgba(255, 255, 255, 0.7);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  .service-text h2 {
-    margin-bottom: 20px;
-    color: #333333;
-  }
-  
-  .service-text p {
-    font-size: 18px;
-    line-height: 1.5;
-    color: #555555;
-    margin: 20px;
-  }
-  
-  .service-text ul {
-    list-style-type: disc;
-    margin-bottom: 20px;
-    color: #555555;
-  }
-  
-  .service-text li {
-    margin-bottom: 10px;
-  }
-  
+
   /* Style gallery carousel */
   
   .slick-slider {
     width: 100%;
     max-width: 80%; /* Adjust the maximum width as needed */
     margin: 0 auto;
+    position: relative;
+    overflow: hidden;
   }
-  
+
   .slick-slide img {
-    width: 100%;
-    height: auto;
+    width: 90%;
+    height: 1000px;
+    object-fit: none;
+    object-position: center ;
   }
   
   @media screen and (max-width: 768px) {

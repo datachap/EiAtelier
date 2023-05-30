@@ -36,7 +36,7 @@
   });
   document.addEventListener("DOMContentLoaded", function() {
     $('.gallery-carousel').slick({
-        autoplay:true,
+        autoplay:false,
         autoplaySpeed: 2500,
       arrows: false,
       prevArrow: '<span class="carousel-prev">&#8249;</span>',
