@@ -68,4 +68,34 @@
     serviceImage.style.transform = `scale(${scale})`;
   });
   
-  
+  document.addEventListener('DOMContentLoaded', function() {
+    var heroImage = document.querySelector('.hero-image');
+    heroImage.classList.add('show');
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var nav = document.querySelector('nav');
+    nav.classList.add('show');
+  });
+
+  var sections = document.querySelectorAll('section');
+
+var options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.5 // Adjust the threshold as needed
+};
+
+var observer = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      var section = entry.target;
+      section.classList.add('show');
+      observer.unobserve(section);
+    }
+  });
+}, options);
+
+sections.forEach(function(section) {
+  observer.observe(section);
+});

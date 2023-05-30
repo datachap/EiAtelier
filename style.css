@@ -30,7 +30,21 @@
     text-align: center;
     z-index: 1;
     padding: 0 20px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
   }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
   
   .hero-content h1,
   .hero-content p {
@@ -41,17 +55,28 @@
   .hero-image {
     position: absolute;
     top: 0;
-    right: 0;
+    right: -100%;
     bottom: 0;
     width: 100%;
     background-image: url('img/hero-background.png');
     background-position: center;
+    transition: right 3s ease-in-out;
+  }
+  
+  .hero-image.show {
+    right: 0;
   }
   
   /* Apply styles to other sections */
   section {
     padding: 50px 0;
     text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  section.show {
+    opacity: 1;
   }
   
   .container {
@@ -62,12 +87,18 @@
   
 /* Style navigation menu */
 nav {
-    background-color: rgba(0, 0, 0, 0.3); /* Set the desired opacity value */   
+    background-color: rgba(0, 0, 0, 0.3);
     position: fixed;
-    top: 0;
+    top: -100%;
     width: 100%;
     z-index: 999;
+    transition: top 4s ease-in-out;
   }
+  
+  nav.show {
+    top: 0;
+  }
+  
   
   .nav-container {
     display: flex;
