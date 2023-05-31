@@ -9,13 +9,12 @@
   <meta name="keywords" content="architecture, architecture firm, architectural services, house design, restoration, spatial planning, interior design, architectural consulting">
   <meta name="author" content="EIAtelier">
 
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap">
   <link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/css/splide-core.min.css">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/js/splide.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <!-- Add the script tag for Slick Carousel JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 </head>
 
 <body>
@@ -45,44 +44,75 @@
       <section id="portfolio">
         <div class="container">
           <h2>Galeri</h2>
-          <div class="gallery-carousel">
-            <!-- Gallery carousel content goes here -->
-            <div><img src="img/galeri/1.jpg" alt="Architecture project - Image 1"></div>
-      <div><img src="img/galeri/3.jpg" alt="Architecture project - Image 3"></div>
-      <div><img src="img/galeri/4.jpg" alt="Architecture project - Image 4"></div>
-      <div><img src="img/galeri/5.jpg" alt="Architecture project - Image 5"></div>
-      <div><img src="img/galeri/6.png" alt="Architecture project - Image 6"></div>
-      <div><img src="img/galeri/7.png" alt="Architecture project - Image 7"></div>
-      <div><img src="img/galeri/8.png" alt="Architecture project - Image 8"></div>
-      <div><img src="img/galeri/9.png" alt="Architecture project - Image 9"></div>
-      <div><img src="img/galeri/10.png" alt="Architecture project - Image 10"></div>
-      <div><img src="img/galeri/11.png" alt="Architecture project - Image 11"></div>
-      <div><img src="img/galeri/12.png" alt="Architecture project - Image 12"></div>
-      <div><img src="img/galeri/13.png" alt="Architecture project - Image 13"></div>
-      <div><img src="img/galeri/Feneri 1.jpg" alt="Architecture project"></div>
-<div><img src="img/galeri/Feneri 3.jpg" alt="Architecture project"></div>
-<div><img src="img/galeri/Feneri 3d.jpg" alt="Architecture project"></div>
-<div><img src="img/galeri/Feneri 4.jpg" alt="Architecture project"></div>
-<div><img src="img/galeri/Feneri2.jpg" alt="Architecture project"></div>
-<div><img src="img/galeri/Halo ambient 1.jpg" alt="Architecture project"></div>
-<div><img src="img/galeri/Halo ambient 2.jpg" alt="Architecture project"></div>
-<div><img src="img/galeri/Halo ambient 4.jpg" alt="Architecture project"></div>
-<div><img src="img/galeri/Honey ambient.jpg" alt="Architecture project"></div>
-<div><img src="img/galeri/Honey mandala.jpg" alt="Architecture project"></div>
-<div><img src="img/galeri/Honey white 2.jpg" alt="Architecture project"></div>
-<div><img src="img/galeri/Pine2.jpg" alt="Architecture project"></div>
-<div><img src="img/galeri/Pure 01.jpg" alt="Architecture project"></div>
-<div><img src="img/galeri/Pure ambient2.jpg" alt="Architecture project"></div>
+          <div id="gallery" class="splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide"><img src="img/galeri/1.jpg" alt="Architecture project - Image 1"></li>
+<li class="splide__slide"><img src="img/galeri/3.jpg" alt="Architecture project - Image 3"></li>
+<li class="splide__slide"><img src="img/galeri/4.jpg" alt="Architecture project - Image 4"></li>
+<li class="splide__slide"><img src="img/galeri/5.jpg" alt="Architecture project - Image 5"></li>
+<li class="splide__slide"><img src="img/galeri/6.png" alt="Architecture project - Image 6"></li>
+<li class="splide__slide"><img src="img/galeri/7.png" alt="Architecture project - Image 7"></li>
+<li class="splide__slide"><img src="img/galeri/8.png" alt="Architecture project - Image 8"></li>
+<li class="splide__slide"><img src="img/galeri/9.png" alt="Architecture project - Image 9"></li>
+<li class="splide__slide"><img src="img/galeri/10.png" alt="Architecture project - Image 10"></li>
+<li class="splide__slide"><img src="img/galeri/11.png" alt="Architecture project - Image 11"></li>
+<li class="splide__slide"><img src="img/galeri/12.png" alt="Architecture project - Image 12"></li>
+<li class="splide__slide"><img src="img/galeri/13.png" alt="Architecture project - Image 13"></li>
+<li class="splide__slide"><img src="img/galeri/Feneri 1.jpg" alt="Architecture project"></li>
+<li class="splide__slide"><img src="img/galeri/Feneri 3.jpg" alt="Architecture project"></li>
+<li class="splide__slide"><img src="img/galeri/Feneri 3d.jpg" alt="Architecture project"></li>
+<li class="splide__slide"><img src="img/galeri/Feneri 4.jpg" alt="Architecture project"></li>
+<li class="splide__slide"><img src="img/galeri/Feneri2.jpg" alt="Architecture project"></li>
+<li class="splide__slide"><img src="img/galeri/Halo ambient 1.jpg" alt="Architecture project"></li>
+<li class="splide__slide"><img src="img/galeri/Halo ambient 2.jpg" alt="Architecture project"></li>
+<li class="splide__slide"><img src="img/galeri/Halo ambient 4.jpg" alt="Architecture project"></li>
+<li class="splide__slide"><img src="img/galeri/Honey ambient.jpg" alt="Architecture project"></li>
+<li class="splide__slide"><img src="img/galeri/Honey mandala.jpg" alt="Architecture project"></li>
+<li class="splide__slide"><img src="img/galeri/Honey white 2.jpg" alt="Architecture project"></li>
+<li class="splide__slide"><img src="img/galeri/Pine2.jpg" alt="Architecture project"></li>
+<li class="splide__slide"><img src="img/galeri/Pure 01.jpg" alt="Architecture project"></li>
+<li class="splide__slide"><img src="img/galeri/Pure ambient2.jpg" alt="Architecture project"></li>
+
+
+              </ul>
+            </div>
           </div>
+          
+          <div id="thumbnail-slider" class="splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide"><img src="img/galeri/1.jpg" alt="Architecture project - Image 1"></li>
+<li class="splide__slide"><img src="img/galeri/3.jpg" alt="Architecture project - Image 3"></li>
+<li class="splide__slide"><img src="img/galeri/4.jpg" alt="Architecture project - Image 4"></li>
+<li class="splide__slide"><img src="img/galeri/5.jpg" alt="Architecture project - Image 5"></li>
+<li class="splide__slide"><img src="img/galeri/6.png" alt="Architecture project - Image 6"></li>
+<li class="splide__slide"><img src="img/galeri/7.png" alt="Architecture project - Image 7"></li>
+<li class="splide__slide"><img src="img/galeri/8.png" alt="Architecture project - Image 8"></li>
+<li class="splide__slide"><img src="img/galeri/9.png" alt="Architecture project - Image 9"></li>
+<li class="splide__slide"><img src="img/galeri/10.png" alt="Architecture project - Image 10"></li>
+<li class="splide__slide"><img src="img/galeri/11.png" alt="Architecture project - Image 11"></li>
+<li class="splide__slide"><img src="img/galeri/12.png" alt="Architecture project - Image 12"></li>
+<li class="splide__slide"><img src="img/galeri/13.png" alt="Architecture project - Image 13"></li>
+<li class="splide__slide"><img src="img/galeri/Feneri 1.jpg" alt="Architecture project"></li>
+<li class="splide__slide"><img src="img/galeri/Feneri 3.jpg" alt="Architecture project"></li>
+<li class="splide__slide"><img src="img/galeri/Feneri 3d.jpg" alt="Architecture project"></li>
+<li class="splide__slide"><img src="img/galeri/Feneri 4.jpg" alt="Architecture project"></li>
+<li class="splide__slide"><img src="img/galeri/Feneri2.jpg" alt="Architecture project"></li>
+<li class="splide__slide"><img src="img/galeri/Halo ambient 1.jpg" alt="Architecture project"></li>
+<li class="splide__slide"><img src="img/galeri/Halo ambient 2.jpg" alt="Architecture project"></li>
+<li class="splide__slide"><img src="img/galeri/Halo ambient 4.jpg" alt="Architecture project"></li>
+<li class="splide__slide"><img src="img/galeri/Honey ambient.jpg" alt="Architecture project"></li>
+<li class="splide__slide"><img src="img/galeri/Honey mandala.jpg" alt="Architecture project"></li>
+<li class="splide__slide"><img src="img/galeri/Honey white 2.jpg" alt="Architecture project"></li>
+<li class="splide__slide"><img src="img/galeri/Pine2.jpg" alt="Architecture project"></li>
+<li class="splide__slide"><img src="img/galeri/Pure 01.jpg" alt="Architecture project"></li>
+<li class="splide__slide"><img src="img/galeri/Pure ambient2.jpg" alt="Architecture project"></li>
+              </ul>
+            </div>
+          </div>
+          
       
-          <div class="carousel-controls">
-            <div class="carousel-prev">
-              &lt;
-            </div>
-            <div class="carousel-next">
-              &gt;
-            </div>
-          </div>
         </div>
       </section>
       

@@ -25,48 +25,9 @@
     requestAnimationFrame(scrollAnimation);
   }
 
-  // Smooth scroll when clicking on navigation links
-  var navLinks = document.querySelectorAll('nav ul li a');
-  navLinks.forEach(function(link) {
-    link.addEventListener('click', function(event) {
-      event.preventDefault();
-      var target = this.getAttribute('href');
-      smoothScroll(target, 800);
-    });
-  });
-  document.addEventListener("DOMContentLoaded", function() {
-    $('.gallery-carousel').slick({
-        autoplay:false,
-        autoplaySpeed: 2500,
-      arrows: false,
-      prevArrow: '<span class="carousel-prev">&#8249;</span>',
-      nextArrow: '<span class="carousel-next">&#8250;</span>'
-    });
+
   
-    // Manually control the carousel navigation
-    $('.carousel-prev').click(function() {
-      $('.gallery-carousel').slick('slickPrev');
-    });
-  
-    $('.carousel-next').click(function() {
-      $('.gallery-carousel').slick('slickNext');
-    });
-  });
-  
-  
-  // Scroll effect for services section
-  window.addEventListener('scroll', function () {
-    const servicesSection = document.querySelector('#services');
-    const serviceImage = servicesSection.querySelector('.service-image');
-    const scrollPosition = window.pageYOffset;
-    const maxScroll = servicesSection.offsetHeight - window.innerHeight;
-  
-    // Calculate image scale based on scroll position
-    const scale = 1 + (scrollPosition / maxScroll) * 0.2; // Adjust the factor (0.05) for desired scale
-  
-    // Apply scale transformation to image
-    serviceImage.style.transform = `scale(${scale})`;
-  });
+
   
   document.addEventListener('DOMContentLoaded', function() {
     var heroImage = document.querySelector('.hero-image');
@@ -99,3 +60,39 @@ var observer = new IntersectionObserver(function(entries, observer) {
 sections.forEach(function(section) {
   observer.observe(section);
 });
+
+
+var main = new Splide( '#gallery', {
+  type       : 'carousel',
+  heightRatio: 0.5,
+  pagination : true,
+  arrows     : false,
+  cover      : true,
+  autoplay  :true,
+} );
+
+var thumbnails = new Splide( '#thumbnail-slider', {
+  type:'slide',
+  rewind          : true,
+  fixedWidth      : 104,
+  fixedHeight     : 58,
+  isNavigation    : true,
+  gap             : 10,
+  focus           : 'center',
+  pagination      : false,
+  cover           : true,
+  dragMinThreshold: {
+    mouse: 4,
+    touch: 10,
+  },
+  breakpoints : {
+    640: {
+      fixedWidth  : 66,
+      fixedHeight : 38,
+    },
+  },
+} );
+
+main.sync( thumbnails );
+main.mount();
+thumbnails.mount();
