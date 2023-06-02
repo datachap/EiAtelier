@@ -63,10 +63,9 @@
 
 
  var main = new Splide('#gallery', {
-   type: 'loop',
-   padding: '5rem',
+   type: 'fade',
    heightRatio: 0.5,
-   pagination: true,
+   pagination: false,
    arrows: false,
    cover: true,
  });
