@@ -14,7 +14,7 @@ body {
 
 /* Style headings */
 h2 {
-  font-size: 42px;
+  font-size: 36px;
   margin: 20px;
 }
 
@@ -152,7 +152,7 @@ nav.show {
 .dropdown-menu {
   display: none;
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.4);
   min-width: 160px;
   padding: 10px;
   z-index: 1;
@@ -160,6 +160,8 @@ nav.show {
 
 .dropdown-menu li {
   display: block;
+  position: relative;
+  float: left;
 }
 
 .dropdown-menu li a {
@@ -294,6 +296,11 @@ footer {
 
 footer p {
   font-size: 14px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0px;
 }
 
 /* Add responsive styles for smaller screens */

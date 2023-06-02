@@ -27,18 +27,29 @@
 
 
 
+ heightRatioVar = 0
+ var currentPageUrl = window.location.href;
+ var currentPageFileName = currentPageUrl.substring(currentPageUrl.lastIndexOf("/") + 1);
+ var currentPageName = currentPageFileName.split(".")[0];
 
 
+ if (currentPageName == "interior") {
+  heightRatioVar = 0.5
+ } else {
+  heightRatioVar = 0.7
+ }
+
+if (currentPageName == "index") {
  document.addEventListener('DOMContentLoaded', function () {
    var heroImage = document.querySelector('.hero-image');
    heroImage.classList.add('show');
  });
 
- document.addEventListener('DOMContentLoaded', function () {
-   var nav = document.querySelector('nav');
-   nav.classList.add('show');
- });
-
+}
+document.addEventListener('DOMContentLoaded', function () {
+  var nav = document.querySelector('nav');
+  nav.classList.add('show');
+});
  var sections = document.querySelectorAll('section');
 
  var options = {
@@ -61,10 +72,12 @@
    observer.observe(section);
  });
 
-
+ 
+ if (currentPageName == "interior" || currentPageName == "design") {
+ 
  var main = new Splide('#gallery', {
    type: 'fade',
-   heightRatio: 0.5,
+   heightRatio: heightRatioVar,
    pagination: false,
    arrows: false,
    cover: true,
@@ -72,3 +85,4 @@
 
  
  main.mount();
+ }
