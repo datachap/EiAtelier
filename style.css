@@ -5,12 +5,14 @@
   box-sizing: border-box;
 }
 
+/* Set background color and font styles for body */
 body {
   background-color: #121212;
   color: #ffffff;
   font-family: 'Montserrat', sans-serif;
 }
 
+/* Style headings */
 h2 {
   font-size: 42px;
   margin: 20px;
@@ -34,7 +36,6 @@ h2 {
   z-index: 1;
   padding: 0 20px;
 }
-
 
 .hero-content h1,
 .hero-content p {
@@ -88,7 +89,6 @@ nav.show {
   top: 0;
 }
 
-
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -125,7 +125,8 @@ nav.show {
   margin-right: 0;
 }
 
-.nav-menu a, .nav-menu span {
+.nav-menu a,
+.nav-menu span {
   text-decoration: none;
   color: #ffffff;
   font-size: 18px;
@@ -151,7 +152,7 @@ nav.show {
 .dropdown-menu {
   display: none;
   position: absolute;
-  background-color:rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   min-width: 160px;
   padding: 10px;
   z-index: 1;
@@ -165,7 +166,9 @@ nav.show {
   padding: 5px 0;
 }
 
-.dropdown-menu li a:hover {
+.dropdown
+
+-menu li a:hover {
   background-color: #e5e5e5;
 }
 
@@ -199,6 +202,7 @@ nav.show {
   align-items: center;
   gap: 20px; /* Adjust the gap size as needed */
 }
+
 .image-section p {
   color: rgba(255, 255, 255, 0.4);
 }
@@ -217,12 +221,9 @@ nav.show {
   object-fit: cover;
 }
 
-
 .image-link:hover p {
   color: white;
 }
-
-
 
 #portfolio p {
   font-size: 18px;
@@ -283,7 +284,6 @@ nav.show {
 }
 
 /* Other CSS styles for the rest of your website... */
-
 
 /* Style footer */
 footer {
