@@ -53,23 +53,25 @@
       <div class="container">
         <h2>Interior</h2>
         <!-- Splide Gallery -->
-        <div id="gallery" class="splide">
-          <div class="splide__track">
-            <ul class="splide__list">
-              <!-- Gallery slide items -->
-              <li class="splide__slide"><img src="img/galeri/1.jpg" alt="Architecture project - Image 1"></li>
-              <li class="splide__slide"><img src="img/galeri/3.jpg" alt="Architecture project - Image 3"></li>
-              <li class="splide__slide"><img src="img/galeri/4.jpg" alt="Architecture project - Image 4"></li>
-              <li class="splide__slide"><img src="img/galeri/5.jpg" alt="Architecture project - Image 5"></li>
-              <li class="splide__slide"><img src="img/galeri/6.png" alt="Architecture project - Image 6"></li>
-              <li class="splide__slide"><img src="img/galeri/7.png" alt="Architecture project - Image 7"></li>
-              <li class="splide__slide"><img src="img/galeri/8.png" alt="Architecture project - Image 8"></li>
-              <li class="splide__slide"><img src="img/galeri/9.png" alt="Architecture project - Image 9"></li>
-              <li class="splide__slide"><img src="img/galeri/10.png" alt="Architecture project - Image 10"></li>
-              <li class="splide__slide"><img src="img/galeri/11.png" alt="Architecture project - Image 11"></li>
-              <li class="splide__slide"><img src="img/galeri/12.png" alt="Architecture project - Image 12"></li>
-              <li class="splide__slide"><img src="img/galeri/13.png" alt="Architecture project - Image 13"></li>
-            </ul>
+        <div class="gallery">
+          <div class="thumbnail" onclick="openModal('img/galeri/1.jpg')"><img src="img/galeri/1.jpg" alt="Thumbnail 1"></div>
+          <div class="thumbnail" onclick="openModal('img/galeri/3.jpg')"><img src="img/galeri/3.jpg" alt="Thumbnail 2"></div>
+          <div class="thumbnail" onclick="openModal('img/galeri/4.jpg')"><img src="img/galeri/4.jpg" alt="Thumbnail 1"></div>
+          <div class="thumbnail" onclick="openModal('img/galeri/5.jpg')"><img src="img/galeri/5.jpg" alt="Thumbnail 2"></div>
+          <div class="thumbnail" onclick="openModal('img/galeri/6.png')"><img src="img/galeri/6.png" alt="Thumbnail 1"></div>
+          <div class="thumbnail" onclick="openModal('img/galeri/7.png')"><img src="img/galeri/7.png" alt="Thumbnail 2"></div>
+          <div class="thumbnail" onclick="openModal('img/galeri/8.png')"><img src="img/galeri/8.png" alt="Thumbnail 1"></div>
+          <div class="thumbnail" onclick="openModal('img/galeri/9.png')"><img src="img/galeri/9.png" alt="Thumbnail 2"></div>
+          <div class="thumbnail" onclick="openModal('img/galeri/10.png')"><img src="img/galeri/10.png" alt="Thumbnail 1"></div>
+          <div class="thumbnail" onclick="openModal('img/galeri/11.png')"><img src="img/galeri/11.png" alt="Thumbnail 2"></div>
+          <div class="thumbnail" onclick="openModal('img/galeri/12.png')"><img src="img/galeri/12.png" alt="Thumbnail 1"></div>
+          <div class="thumbnail" onclick="openModal('img/galeri/13.png')"><img src="img/galeri/13.png" alt="Thumbnail 2"></div>
+          <!-- Add more thumbnails as needed -->
+        </div>
+      
+        <div class="modal" onclick="closeModal()">
+          <div class="modal-content">
+            <img id="modal-image" src="" alt="Modal Image">
           </div>
         </div>
 

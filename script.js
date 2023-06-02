@@ -95,14 +95,16 @@ document.addEventListener('DOMContentLoaded', function () {
  
  if (currentPageName == "interior" || currentPageName == "design") {
  
- var main = new Splide('#gallery', {
-   type: 'fade',
-   heightRatio: heightRatioVar,
-   pagination: false,
-   arrows: false,
-   cover: true,
- });
-
- 
- main.mount();
+  function openModal(imageUrl) {
+    var modal = document.querySelector('.modal');
+    var modalImage = document.getElementById('modal-image');
+    modalImage.src = imageUrl;
+    modal.style.display = 'flex';
+  }
+  
+  function closeModal() {
+    var modal = document.querySelector('.modal');
+    modal.style.display = 'none';
+  }
+  
  }
