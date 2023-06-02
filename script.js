@@ -1,3 +1,23 @@
+ // Show the loader initially
+
+ var loader = document.querySelector('.loader');
+loader.style.display = 'block';
+
+// Function to hide the loader
+function hideLoader() {
+  loader.style.display = 'none';
+}
+
+// Function to check if all assets are loaded
+function assetsLoaded() {
+  hideLoader(); // Hide the loader when all assets are loaded
+  // Add any additional actions you want to perform after all assets are loaded
+}
+
+// Event listener to check when all assets are loaded
+window.addEventListener('load', assetsLoaded);
+
+ 
  // Smooth scroll function
  function smoothScroll(target, duration) {
    var targetElement = document.querySelector(target);
