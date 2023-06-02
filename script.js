@@ -36,7 +36,7 @@
  if (currentPageName == "interior") {
   heightRatioVar = 0.5
  } else {
-  heightRatioVar = 0.7
+  heightRatioVar = 1
  }
 
 if (currentPageName == "index") {
