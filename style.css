@@ -47,10 +47,8 @@ h2 {
 .hero-image {
   position: absolute;
   top: 0;
-  right: -100%;
   bottom: 0;
   width: 100%;
-  background-image: url('img/hero-background.jpg');
   background-position: center;
   transition: right 3s ease-in-out;
 }
