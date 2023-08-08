@@ -60,7 +60,7 @@
         <h2>Object design</h2>
         <!-- Splide Gallery -->
 
-        <div class="splide">
+        <div class="splide" id="main-carousel">
           <div class="splide__track">
             <ul class="splide__list">
               <li class="splide__slide"><img src="img/galeri/Feneri 1.jpg" alt="Thumbnail 1"></li>
@@ -92,15 +92,37 @@
           </div>
         </div>
 
+        <ul id="thumbnails" class="thumbnails">
+              <li class="thumbnail"><img src="img/galeri/Feneri 1.jpg" alt="Thumbnail 1"></li>
+              <li class="thumbnail"><img src="img/galeri/Feneri 3.jpg" alt="Thumbnail 2"></li>
+              <li class="thumbnail"><img src="img/galeri/Feneri 3d.jpg" alt="Thumbnail 1"></li>
+              <li class="thumbnail"><img src="img/galeri/Feneri 4.jpg" alt="Thumbnail 2"></li>
+              <li class="thumbnail"><img src="img/galeri/Feneri2.jpg" alt="Thumbnail 1"></li>
+              <li class="thumbnail"><img src="img/galeri/Halo ambient 1.jpg" alt="Thumbnail 2"></li>
+              <li class="thumbnail"><img src="img/galeri/Halo ambient 2.jpg" alt="Thumbnail 1"></li>
+              <li class="thumbnail"><img src="img/galeri/Halo ambient 4.jpg" alt="Thumbnail 2"></li>
+              <li class="thumbnail"><img src="img/galeri/Honey ambient.jpg" alt="Thumbnail 1"></li>
+              <li class="thumbnail"><img src="img/galeri/Honey mandala.jpg" alt="Thumbnail 2"></li>
+              <li class="thumbnail"><img src="img/galeri/Honey white 2.jpg" alt="Thumbnail 1"></li>
+              <li class="thumbnail"><img src="img/galeri/Pine2.jpg" alt="Thumbnail 2"></li>
+              <li class="thumbnail"><img src="img/galeri/Pure 01.jpg" alt="Thumbnail 1"></li>
+              <li class="thumbnail"><img src="img/galeri/Pure ambient2.jpg" alt="Thumbnail 2"></li>
+              <li class="thumbnail"><img src="img/galeri/s1.jpg" alt="Thumbnail 1"></li>
+              <li class="thumbnail"><img src="img/galeri/s2.jpg" alt="Thumbnail 2"></li>
+              <li class="thumbnail"><img src="img/galeri/s3.jpg" alt="Thumbnail 1"></li>
+              <li class="thumbnail"><img src="img/galeri/s4.jpg" alt="Thumbnail 2"></li>
+              <li class="thumbnail"><img src="img/galeri/s5.jpg" alt="Thumbnail 1"></li>
+              <li class="thumbnail"><img src="img/galeri/s6.jpg" alt="Thumbnail 2"></li>
+              <li class="thumbnail"><img src="img/galeri/s7.jpg" alt="Thumbnail 1"></li>
+              <li class="thumbnail"><img src="img/galeri/s8.jpg" alt="Thumbnail 2"></li>
+              <li class="thumbnail"><img src="img/galeri/s9.jpg" alt="Thumbnail 1"></li>
+              <li class="thumbnail"><img src="img/galeri/s10.jpg" alt="Thumbnail 2"></li>
+        </ul>
+
           <!-- Add more thumbnails as needed -->
         </div>
       
-        <div class="modal" onclick="closeModal()">
-          <div class="modal-content">
-            <img id="modal-image" src="" alt="Modal Image">
-          </div>
-        </div>
-
+      
       </div>
     </section>
 
@@ -111,27 +133,47 @@
   </footer>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const splide = new Splide('.splide', {
-        type: 'slide', // Use 'loop' for infinite loop
-        perPage: 1,
-        autoplay: true,
-        interval: 3000, // Change slide every 3 seconds
-        pauseOnHover: false,
-      });
-  
-      splide.mount();
-  
-      // Add event listener for arrow key navigation
-      document.addEventListener('keydown', function (event) {
-        if (event.key === 'ArrowLeft') {
-          splide.go('<');
-        } else if (event.key === 'ArrowRight') {
-          splide.go('>');
+    var splide = new Splide( '#main-carousel', {
+      pagination: false,
+      keyboard: true,
+    } );
+    
+    
+    var thumbnails = document.getElementsByClassName( 'thumbnail' );
+    var current;
+    
+    
+    for ( var i = 0; i < thumbnails.length; i++ ) {
+      initThumbnail( thumbnails[ i ], i );
+    }
+    
+    
+    function initThumbnail( thumbnail, index ) {
+      thumbnail.addEventListener( 'click', function () {
+        splide.go( index );
+      } );
+    }
+    
+    
+    splide.on( 'mounted move', function () {
+      var thumbnail = thumbnails[ splide.index ];
+    
+    
+      if ( thumbnail ) {
+        if ( current ) {
+          current.classList.remove( 'is-active' );
         }
-      });
-    });
+    
+    
+        thumbnail.classList.add( 'is-active' );
+        current = thumbnail;
+      }
+    } );
+    
+    
+    splide.mount();
   </script>
+
   
 
   <script src="script.js"></script>

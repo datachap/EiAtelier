@@ -57,7 +57,7 @@
       <div class="container">
         <h2>Interior</h2>
         <!-- Splide Gallery -->
-        <div class="splide">
+        <div class="splide" id="main-carousel">
           <div class="splide__track">
             <ul class="splide__list">
           <li class="splide__slide"><img src="img/galeri/1.jpg" alt="Thumbnail 1"></li>
@@ -76,12 +76,24 @@
         </ul>
       </div>
     </div>
+
+        <ul id="thumbnails" class="thumbnails">
+      <li class="thumbnail"><img src="img/galeri/1.jpg" alt="Thumbnail 1"></li>
+      <li class="thumbnail"><img src="img/galeri/3.jpg" alt="Thumbnail 2"></li>
+      <li class="thumbnail"><img src="img/galeri/4.jpg" alt="Thumbnail 1"></li>
+      <li class="thumbnail"><img src="img/galeri/5.jpg" alt="Thumbnail 2"></li>
+      <li class="thumbnail"><img src="img/galeri/6.png" alt="Thumbnail 1"></li>
+      <li class="thumbnail"><img src="img/galeri/7.png" alt="Thumbnail 2"></li>
+      <li class="thumbnail"><img src="img/galeri/8.png" alt="Thumbnail 1"></li>
+      <li class="thumbnail"><img src="img/galeri/9.png" alt="Thumbnail 2"></li>
+      <li class="thumbnail"><img src="img/galeri/10.png" alt="Thumbnail 1"></li>
+      <li class="thumbnail"><img src="img/galeri/11.png" alt="Thumbnail 2"></li>
+      <li class="thumbnail"><img src="img/galeri/12.png" alt="Thumbnail 1"></li>
+      <li class="thumbnail"><img src="img/galeri/13.png" alt="Thumbnail 2"></li>
+      <!-- Add more thumbnails as needed -->
+    </ul>
+
       
-        <div class="modal" onclick="closeModal()">
-          <div class="modal-content">
-            <img id="modal-image" src="" alt="Modal Image">
-          </div>
-        </div>
 
       </div>
     </section>
@@ -91,50 +103,47 @@
   <footer class="footer">
     <p>&copy; 2023 EIAtelier. All rights are reserved.</p>
   </footer>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const splide = new Splide('.splide', {
-      type: 'slide', // Use 'loop' for infinite loop
-      perPage: 1,
-      autoplay: true,
-      interval: 3000, // Change slide every 3 seconds
-      pauseOnHover: false,
-    });
-
-    splide.mount();
-
-    // Add event listener for arrow key navigation
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'ArrowLeft') {
-        splide.go('prev');
-      } else if (event.key === 'ArrowRight') {
-        splide.go('next');
+  <script>
+    var splide = new Splide( '#main-carousel', {
+      pagination: false,
+      keyboard: true,
+    } );
+    
+    
+    var thumbnails = document.getElementsByClassName( 'thumbnail' );
+    var current;
+    
+    
+    for ( var i = 0; i < thumbnails.length; i++ ) {
+      initThumbnail( thumbnails[ i ], i );
+    }
+    
+    
+    function initThumbnail( thumbnail, index ) {
+      thumbnail.addEventListener( 'click', function () {
+        splide.go( index );
+      } );
+    }
+    
+    
+    splide.on( 'mounted move', function () {
+      var thumbnail = thumbnails[ splide.index ];
+    
+    
+      if ( thumbnail ) {
+        if ( current ) {
+          current.classList.remove( 'is-active' );
+        }
+    
+    
+        thumbnail.classList.add( 'is-active' );
+        current = thumbnail;
       }
-    });
-  });
-</script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const splide = new Splide('.splide', {
-      type: 'slide', // Use 'loop' for infinite loop
-      perPage: 1,
-      autoplay: true,
-      interval: 3000, // Change slide every 3 seconds
-      pauseOnHover: false,
-    });
-
+    } );
+    
+    
     splide.mount();
-
-    // Add event listener for arrow key navigation
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'ArrowLeft') {
-        splide.go('<');
-      } else if (event.key === 'ArrowRight') {
-        splide.go('>');
-      }
-    });
-  });
-</script>
+  </script>
 
   <script src="script.js"></script>
 
