@@ -19,7 +19,11 @@
   <link rel="stylesheet" href="style.css">
 
   <!-- Splide CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/css/splide-core.min.css">
+<!-- CSS file for Splide -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.7/dist/css/splide.min.css">
+
+<!-- JavaScript files for Splide -->
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.7/dist/js/splide.min.js"></script>
 
   <!-- JavaScript Libraries -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/js/splide.min.js"></script>
@@ -53,21 +57,25 @@
       <div class="container">
         <h2>Interior</h2>
         <!-- Splide Gallery -->
-        <div class="gallery">
-          <div class="thumbnail" onclick="openModal('img/galeri/1.jpg')"><img src="img/galeri/1.jpg" alt="Thumbnail 1"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/3.jpg')"><img src="img/galeri/3.jpg" alt="Thumbnail 2"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/4.jpg')"><img src="img/galeri/4.jpg" alt="Thumbnail 1"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/5.jpg')"><img src="img/galeri/5.jpg" alt="Thumbnail 2"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/6.png')"><img src="img/galeri/6.png" alt="Thumbnail 1"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/7.png')"><img src="img/galeri/7.png" alt="Thumbnail 2"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/8.png')"><img src="img/galeri/8.png" alt="Thumbnail 1"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/9.png')"><img src="img/galeri/9.png" alt="Thumbnail 2"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/10.png')"><img src="img/galeri/10.png" alt="Thumbnail 1"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/11.png')"><img src="img/galeri/11.png" alt="Thumbnail 2"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/12.png')"><img src="img/galeri/12.png" alt="Thumbnail 1"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/13.png')"><img src="img/galeri/13.png" alt="Thumbnail 2"></div>
+        <div class="splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+          <li class="splide__slide"><img src="img/galeri/1.jpg" alt="Thumbnail 1"></li>
+          <li class="splide__slide"><img src="img/galeri/3.jpg" alt="Thumbnail 2"></li>
+          <li class="splide__slide"><img src="img/galeri/4.jpg" alt="Thumbnail 1"></li>
+          <li class="splide__slide"><img src="img/galeri/5.jpg" alt="Thumbnail 2"></li>
+          <li class="splide__slide"><img src="img/galeri/6.png" alt="Thumbnail 1"></li>
+          <li class="splide__slide"><img src="img/galeri/7.png" alt="Thumbnail 2"></li>
+          <li class="splide__slide"><img src="img/galeri/8.png" alt="Thumbnail 1"></li>
+          <li class="splide__slide"><img src="img/galeri/9.png" alt="Thumbnail 2"></li>
+          <li class="splide__slide"><img src="img/galeri/10.png" alt="Thumbnail 1"></li>
+          <li class="splide__slide"><img src="img/galeri/11.png" alt="Thumbnail 2"></li>
+          <li class="splide__slide"><img src="img/galeri/12.png" alt="Thumbnail 1"></li>
+          <li class="splide__slide"><img src="img/galeri/13.png" alt="Thumbnail 2"></li>
           <!-- Add more thumbnails as needed -->
-        </div>
+        </ul>
+      </div>
+    </div>
       
         <div class="modal" onclick="closeModal()">
           <div class="modal-content">
@@ -83,6 +91,50 @@
   <footer class="footer">
     <p>&copy; 2023 EIAtelier. All rights are reserved.</p>
   </footer>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const splide = new Splide('.splide', {
+      type: 'slide', // Use 'loop' for infinite loop
+      perPage: 1,
+      autoplay: true,
+      interval: 3000, // Change slide every 3 seconds
+      pauseOnHover: false,
+    });
+
+    splide.mount();
+
+    // Add event listener for arrow key navigation
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'ArrowLeft') {
+        splide.go('prev');
+      } else if (event.key === 'ArrowRight') {
+        splide.go('next');
+      }
+    });
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const splide = new Splide('.splide', {
+      type: 'slide', // Use 'loop' for infinite loop
+      perPage: 1,
+      autoplay: true,
+      interval: 3000, // Change slide every 3 seconds
+      pauseOnHover: false,
+    });
+
+    splide.mount();
+
+    // Add event listener for arrow key navigation
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'ArrowLeft') {
+        splide.go('<');
+      } else if (event.key === 'ArrowRight') {
+        splide.go('>');
+      }
+    });
+  });
+</script>
 
   <script src="script.js"></script>
 

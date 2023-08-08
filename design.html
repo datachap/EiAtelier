@@ -18,6 +18,12 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
 
+  <!-- CSS file for Splide -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.7/dist/css/splide.min.css">
+
+<!-- JavaScript files for Splide -->
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.7/dist/js/splide.min.js"></script>
+
   <!-- Splide CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/css/splide-core.min.css">
 
@@ -54,31 +60,37 @@
         <h2>Object design</h2>
         <!-- Splide Gallery -->
 
-        <div class="gallery">
-          <div class="thumbnail" onclick="openModal('img/galeri/Feneri 1.jpg')"><img src="img/galeri/Feneri 1.jpg" alt="Thumbnail 1"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/Feneri 3.jpg')"><img src="img/galeri/Feneri 3.jpg" alt="Thumbnail 2"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/Feneri 3d.jpg')"><img src="img/galeri/Feneri 3d.jpg" alt="Thumbnail 1"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/Feneri 4.jpg')"><img src="img/galeri/Feneri 4.jpg" alt="Thumbnail 2"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/Feneri2.jpg')"><img src="img/galeri/Feneri2.jpg" alt="Thumbnail 1"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/Halo ambient 1.jpg')"><img src="img/galeri/Halo ambient 1.jpg" alt="Thumbnail 2"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/Halo ambient 2.jpg')"><img src="img/galeri/Halo ambient 2.jpg" alt="Thumbnail 1"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/Halo ambient 4.jpg')"><img src="img/galeri/Halo ambient 4.jpg" alt="Thumbnail 2"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/Honey ambient.jpg')"><img src="img/galeri/Honey ambient.jpg" alt="Thumbnail 1"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/Honey mandala.jpg')"><img src="img/galeri/Honey mandala.jpg" alt="Thumbnail 2"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/Honey white 2.jpg')"><img src="img/galeri/Honey white 2.jpg" alt="Thumbnail 1"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/Pine2.jpg')"><img src="img/galeri/Pine2.jpg" alt="Thumbnail 2"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/Pure 01.jpg')"><img src="img/galeri/Pure 01.jpg" alt="Thumbnail 1"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/Pure ambient2.jpg')"><img src="img/galeri/Pure ambient2.jpg" alt="Thumbnail 2"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/s1.jpg')"><img src="img/galeri/s1.jpg" alt="Thumbnail 1"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/s2.jpg')"><img src="img/galeri/s2.jpg" alt="Thumbnail 2"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/s3.jpg')"><img src="img/galeri/s3.jpg" alt="Thumbnail 1"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/s4.jpg')"><img src="img/galeri/s4.jpg" alt="Thumbnail 2"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/s5.jpg')"><img src="img/galeri/s5.jpg" alt="Thumbnail 1"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/s6.jpg')"><img src="img/galeri/s6.jpg" alt="Thumbnail 2"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/s7.jpg')"><img src="img/galeri/s7.jpg" alt="Thumbnail 1"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/s8.jpg')"><img src="img/galeri/s8.jpg" alt="Thumbnail 2"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/s9.jpg')"><img src="img/galeri/s9.jpg" alt="Thumbnail 1"></div>
-          <div class="thumbnail" onclick="openModal('img/galeri/s10.jpg')"><img src="img/galeri/s10.jpg" alt="Thumbnail 2"></div>
+        <div class="splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide"><img src="img/galeri/Feneri 1.jpg" alt="Thumbnail 1"></li>
+              <li class="splide__slide"><img src="img/galeri/Feneri 3.jpg" alt="Thumbnail 2"></li>
+              <li class="splide__slide"><img src="img/galeri/Feneri 3d.jpg" alt="Thumbnail 1"></li>
+              <li class="splide__slide"><img src="img/galeri/Feneri 4.jpg" alt="Thumbnail 2"></li>
+              <li class="splide__slide"><img src="img/galeri/Feneri2.jpg" alt="Thumbnail 1"></li>
+              <li class="splide__slide"><img src="img/galeri/Halo ambient 1.jpg" alt="Thumbnail 2"></li>
+              <li class="splide__slide"><img src="img/galeri/Halo ambient 2.jpg" alt="Thumbnail 1"></li>
+              <li class="splide__slide"><img src="img/galeri/Halo ambient 4.jpg" alt="Thumbnail 2"></li>
+              <li class="splide__slide"><img src="img/galeri/Honey ambient.jpg" alt="Thumbnail 1"></li>
+              <li class="splide__slide"><img src="img/galeri/Honey mandala.jpg" alt="Thumbnail 2"></li>
+              <li class="splide__slide"><img src="img/galeri/Honey white 2.jpg" alt="Thumbnail 1"></li>
+              <li class="splide__slide"><img src="img/galeri/Pine2.jpg" alt="Thumbnail 2"></li>
+              <li class="splide__slide"><img src="img/galeri/Pure 01.jpg" alt="Thumbnail 1"></li>
+              <li class="splide__slide"><img src="img/galeri/Pure ambient2.jpg" alt="Thumbnail 2"></li>
+              <li class="splide__slide"><img src="img/galeri/s1.jpg" alt="Thumbnail 1"></li>
+              <li class="splide__slide"><img src="img/galeri/s2.jpg" alt="Thumbnail 2"></li>
+              <li class="splide__slide"><img src="img/galeri/s3.jpg" alt="Thumbnail 1"></li>
+              <li class="splide__slide"><img src="img/galeri/s4.jpg" alt="Thumbnail 2"></li>
+              <li class="splide__slide"><img src="img/galeri/s5.jpg" alt="Thumbnail 1"></li>
+              <li class="splide__slide"><img src="img/galeri/s6.jpg" alt="Thumbnail 2"></li>
+              <li class="splide__slide"><img src="img/galeri/s7.jpg" alt="Thumbnail 1"></li>
+              <li class="splide__slide"><img src="img/galeri/s8.jpg" alt="Thumbnail 2"></li>
+              <li class="splide__slide"><img src="img/galeri/s9.jpg" alt="Thumbnail 1"></li>
+              <li class="splide__slide"><img src="img/galeri/s10.jpg" alt="Thumbnail 2"></li>
+              
+            </ul>
+          </div>
+        </div>
 
           <!-- Add more thumbnails as needed -->
         </div>
@@ -97,6 +109,30 @@
   <footer class="footer"> 
     <p>&copy; 2023 EIAtelier. All rights are reserved.</p>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const splide = new Splide('.splide', {
+        type: 'slide', // Use 'loop' for infinite loop
+        perPage: 1,
+        autoplay: true,
+        interval: 3000, // Change slide every 3 seconds
+        pauseOnHover: false,
+      });
+  
+      splide.mount();
+  
+      // Add event listener for arrow key navigation
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'ArrowLeft') {
+          splide.go('<');
+        } else if (event.key === 'ArrowRight') {
+          splide.go('>');
+        }
+      });
+    });
+  </script>
+  
 
   <script src="script.js"></script>
 
